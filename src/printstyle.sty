@@ -1,0 +1,39 @@
+\ProvidesPackage{printstyle}[2018/02/15 2 put any packages you would like to use here]
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{geometry}
+\geometry{
+	a4paper, % 210 * 297mm
+	hcentering,%将hmarginratio设为1:1，即left=right
+	ignoreall,%body部分不包含top,bottom,left,right，即textheight就是正文的高度。
+	top=3cm,
+	textheight=267mm,%297-25.4x2
+	nomarginpar,%即\marginparwidth=0pt and \marginparsep=0pt
+	left=15mm%注意left=right
+	}
+
+
+\lstset{% general command to set parameter(s)
+basicstyle=\small, % print whole listing small
+keywordstyle=\color{blue!70}\bfseries\underbar,
+% underlined bold black keywords
+identifierstyle=, % nothing happens
+commentstyle=\itshape,
+rulesepcolor=\color{red!20!green!20!blue!20},
+stringstyle=\ttfamily, % typewriter type for strings
+showstringspaces=false, % no special string spaces
+numbers=left, 
+numberstyle=\tiny, 
+stepnumber=2, 
+numbersep=5pt,
+breaklines=true,
+breakautoindent=true,
+tabsize=2,
+linewidth=\linewidth,
+xleftmargin=0cm,
+xrightmargin=0cm,
+language={[11]C++}
+}
+
+
+\endinput
